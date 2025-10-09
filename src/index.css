@@ -6,7 +6,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(135deg, #ffffff, #b9bbee) no-repeat;
+  background: linear-gradient(125deg, #92bafb, #acddfc);
+  background-repeat: no-repeat;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,9 +28,9 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   min-width: 320px;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 button {
