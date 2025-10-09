@@ -87,7 +87,7 @@ function App() {
                         <li
                           key={user}
                           className="p-2 cursor-pointer hover:bg-gray-700"
-                          onClick={() => usernameSuggestions(user)}
+                          onClick={() => suggestionClick(user)}
                         >
                           {user}
                         </li>
