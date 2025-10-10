@@ -49,14 +49,14 @@ function Product() {
 
   return (
     <div className="app-container flex flex-col items-center w-screen h-screen p-12">
-      <h1 className="text-2xl font-bold text-black">🛍️ Product Listing</h1>
+      <h1 className="text-3xl font-bold text-black">🛍️ Product Listing</h1>
 
       <SearchBar onSearch={handleSearch} />
 
-      <div className="sort-controls h-25 w-150 p-3 border-1 border-purple-800">
+      <div className="sort-controls flex justify-between h-25 w-[90%] border-2 border-purple-900 text-slate-800 rounded-md p-4 shadow-md shadow-slate-400">
         <label>Sort by: </label>
-        <select onChange={(e) => handleSort(e.target.value)} value={sortType}>
-          <option value="">Select</option>
+        <select onChange={(e) => handleSort(e.target.value)} value={sortType} className="border-0 outline-0">
+          <option value="" className="bg-amber-400">Select</option>
           <option value="price-asc">Price (Low → High)</option>
           <option value="price-desc">Price (High → Low)</option>
           <option value="rating-asc">Rating (Low → High)</option>
@@ -64,7 +64,7 @@ function Product() {
         </select>
       </div>
 
-      <div className="product-grid">
+      <div className="product-grid grid grid-cols-3 gap-10 my-5">
         {filtered.length > 0 ? (
           filtered.map((item) => <ProductCard key={item.id} product={item} />)
         ) : (
