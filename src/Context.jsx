@@ -11,19 +11,19 @@ const ContextP = ({ children }) => {
   };
 
   function reduser(state, action) {
-  if (action.type == "FETCH_DATA") {
-    return {
-      ...state,
-      apiData: action.payload,
-    };
-  } else if (action.type == "cart") {
-  return {
-    ...state,
-    cart: [...state.cart, action.payload], 
-  };
-}
-  return state; // Always return state for unknown actions
-}
+    if (action.type === "FETCH_DATA") {
+      return {
+        ...state,
+        apiData: action.payload,
+      };
+    } else if (action.type === "ADD_TO_CART") {
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
+    }
+    return state;
+  }
 
   useEffect(() => {
     fetch("https://dummyjson.com/recipes")

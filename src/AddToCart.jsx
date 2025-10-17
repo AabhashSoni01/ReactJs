@@ -1,18 +1,21 @@
-const AddToCart = ({ cart, SetCart }) => {
+import React, { useContext } from "react";
+import Context from "./Context";
+
+const AddToCart = () => {
+  const { state, dispatch } = useContext(Context);
+  console.log(state.cart, "hello");
+
   return (
     <div>
-      {cart.map((a) => {
-        return (
-          <>
-            <div id="card">
-              <img src={a.image} />
-              <p>{a.name}</p>
-              <p> Rating: {a.rating}</p>
-              <button onClick={() => SetCart([...cart, a])}>add </button>
-            </div>
-          </>
-        );
-      })}
+      {state.cart.map((a, idx) => (
+        <div id="card" key={a.id ?? idx}>
+          <p>{a.name}</p>
+          <p>Rating: {a.rating}</p>
+          <button onClick={() => dispatch({ type: "ADD_TO_CART", payload: a })}>
+            add
+          </button>
+        </div>
+      ))}
     </div>
   );
 };

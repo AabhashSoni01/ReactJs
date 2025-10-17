@@ -3,7 +3,7 @@ import Context from "./Context";
 import "./App.css";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Recipe = () => {
   let { dispatch, state } = useContext(Context);
 
   return (
@@ -33,4 +33,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Recipe;

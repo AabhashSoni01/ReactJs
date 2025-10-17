@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Recipe />} />
         <Route path="/cart" element={<AddToCart />} />
         //{" "}
       </Routes>
