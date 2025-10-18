@@ -11,8 +11,8 @@ const AddToCart = () => {
         <div id="card" key={a.id ?? idx}>
           <p>{a.name}</p>
           <p>Rating: {a.rating}</p>
-          <button onClick={() => dispatch({ type: "ADD_TO_CART", payload: a })}>
-            add
+          <button onClick={() => dispatch({ type: "cart", payload: a })}>
+            Add
           </button>
         </div>
       ))}
