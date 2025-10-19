@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 const Recipe = () => {
   let { dispatch, state } = useContext(Context);
 
+  const cartItemCount = state.cart.length;
+
   return (
     <div>
-      <div>
+      <div className="mx-4">
         <Link to={"/cart"}>
-          <button className="text-black">Cart</button>
+          <button className="text-black">Cart ({cartItemCount})</button>
         </Link>
       </div>
       <>

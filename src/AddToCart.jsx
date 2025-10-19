@@ -2,20 +2,24 @@ import React, { useContext } from "react";
 import Context from "./Context";
 
 const AddToCart = () => {
-  const { state, dispatch } = useContext(Context);
-  console.log(state.cart, "hello");
+  const { state } = useContext(Context);
+  const cartItems = state.cart;
 
   return (
-    <div>
-      {state.cart.map((a, idx) => (
-        <div id="card" key={a.id ?? idx}>
-          <p>{a.name}</p>
-          <p>Rating: {a.rating}</p>
-          <button onClick={() => dispatch({ type: "cart", payload: a })}>
-            Add
-          </button>
-        </div>
-      ))}
+    <div className="text-black text-center">
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty. Please add items from the Home page.</p>
+      ) : (
+        cartItems.map((item, index) => {
+          return (
+            <div key={item.id || index} id="card">
+              <img src={item.image} alt={item.name} />
+              <p>{item.name}</p>
+              <p>Rating: {item.rating}</p>
+            </div>
+          );
+        })
+      )}
     </div>
   );
 };

@@ -16,10 +16,15 @@ const ContextP = ({ children }) => {
         ...state,
         apiData: action.payload,
       };
-    } else if (action.type === "ADD_TO_CART") {
+    } else if (action.type == "cart") {
       return {
         ...state,
         cart: [...state.cart, action.payload],
+      };
+    } else if (action.type == "REMOVE_ITEM") {
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
       };
     }
     return state;
