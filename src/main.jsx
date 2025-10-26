@@ -23,6 +23,7 @@ import App from "./App.jsx";
 import { ContextP } from "./Context.jsx";
 import { BrowserRouter } from "react-router-dom";
 import Week1 from "./Practice/week1.jsx";
+import V1 from "./Practice/week2/V1.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -31,6 +32,8 @@ createRoot(document.getElementById("root")).render(
         <App />
       </ContextP>
     </BrowserRouter> */}
+
     {/* <Week1 /> */}
+    {/* <V1 /> */}
   </StrictMode>
 );
