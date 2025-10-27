@@ -8,7 +8,7 @@ const AddToCart = () => {
   return (
     <div className="text-black text-center">
       {cartItems.length === 0 ? (
-        <p>Your cart is empty. Please add items from the Home page.</p>
+        <p>Your cart is empty. Please add items !!</p>
       ) : (
         cartItems.map((item, index) => {
           return (
