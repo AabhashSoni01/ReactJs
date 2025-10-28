@@ -27,13 +27,13 @@ import V1 from "./Practice/week2/V1.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <ContextP>
         <App />
       </ContextP>
-    </BrowserRouter>
+    </BrowserRouter> */}
 
     {/* <Week1 /> */}
-    {/* <V1 /> */}
+    <V1 />
   </StrictMode>
 );
