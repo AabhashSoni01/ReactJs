@@ -24,6 +24,7 @@ import { ContextP } from "./Context.jsx";
 import { BrowserRouter } from "react-router-dom";
 import Week1 from "./Practice/week1.jsx";
 import V1 from "./Practice/week2/V1.jsx";
+import StopWatch from "./StopWatch.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -34,6 +35,7 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter> */}
 
     {/* <Week1 /> */}
-    <V1 />
+    {/* <V1 /> */}
+    <StopWatch />
   </StrictMode>
 );
