@@ -25,6 +25,7 @@ import { BrowserRouter } from "react-router-dom";
 import Week1 from "./Practice/week1.jsx";
 import V1 from "./Practice/week2/V1.jsx";
 import StopWatch from "./StopWatch.jsx";
+import ToDoList from "./ToDoList.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -36,6 +37,7 @@ createRoot(document.getElementById("root")).render(
 
     {/* <Week1 /> */}
     {/* <V1 /> */}
-    <StopWatch />
+    {/* <StopWatch /> */}
+    <ToDoList />
   </StrictMode>
 );
